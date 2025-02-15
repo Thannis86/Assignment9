@@ -1,8 +1,6 @@
-import { currentUser, auth } from "@clerk/nextjs/server";
+import { currentUser } from "@clerk/nextjs/server";
 
-export default async function homePage() {
-  const { userId } = await auth();
-  console.log({ userId });
+export default async function newAccountPage() {
   const user = await currentUser();
   console.log(user);
   const userID = await user.id;
@@ -12,10 +10,5 @@ export default async function homePage() {
   console.log(userID);
   console.log(userFirstName);
   console.log(userEmail);
-
-  return (
-    <>
-      <div>This is a fantastic page</div>
-    </>
-  );
+  return <p>New Account</p>;
 }

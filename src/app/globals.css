@@ -17,6 +17,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Radix Crap */
 .radix-themes {
   /* background-color: var(--accent-1); */
   color: var(--gray-12);
@@ -28,11 +29,23 @@ body {
   grid-template-rows: 1fr 2fr 8fr;
 }
 
+/* End Radix Crap */
+
 /* Navbar */
 #navbar {
   display: grid;
   grid-area: 1 / 1 / 2 / 6;
   grid-template-columns: 2fr 6fr 2fr;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#navColour {
+  grid-area: 1 / 1 / 2 / 4;
+  background-color: var(--violet-9);
+  opacity: 10%;
 }
 
 #navHome {
@@ -40,4 +53,49 @@ body {
   justify-self: center;
   align-self: center;
 }
+
+#dropDownDiv {
+  display: flex;
+  grid-area: 1 / 3 / 2 / 4;
+  /* align-items: end; */
+  margin: 5px;
+  justify-content: end;
+}
+
+#navLogo {
+  display: flex;
+  margin: 5px;
+  grid-area: 1 / 1 / 2 / 2;
+  justify-content: start;
+}
+
+#navSep {
+  display: flex;
+  grid-area: 1 / 1 / 4 / 4;
+  align-self: flex-end;
+}
 /* End Nav Bar */
+
+/* Sign In/Up Pages */
+
+#signMainDiv {
+  display: grid;
+  grid-area: 1 / 1 / 4 / 6;
+  grid-template-columns: 2fr 2fr 8fr 2fr 2fr;
+  grid-template-rows: 1fr 1fr 9fr;
+}
+
+#signHead {
+  display: flex;
+  grid-area: 2/3/3/4;
+  justify-self: center;
+  align-self: center;
+}
+
+#signBox {
+  display: flex;
+  grid-area: 3/3/4/4;
+  justify-content: center;
+}
+
+/* End Sign In/Up Pages */
