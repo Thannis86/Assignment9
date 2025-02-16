@@ -57,3 +57,9 @@ Today I decided to start with the user page as an easier start. I've setup a reg
 I've also added a button to the nav bar to take you to your own profile page which was a huge headache to get the current user ID on the client side. I tried creating a server side component that would export just the user ID but because of the async/await section, it wouldn't properly send the user ID. Eventually I used 'useUser' to be able to properly get it client side.
 
 With the form for editing the profile mostly setup (Just need to do the submit button and the function for that), I decided to work on the posts section, then ran into issues with the mapping component, partly due to typescript and it wanting a type for the posts element which i don't know how to add, so i switched to the posts page instead which will likely just be added to the home page with the posts page working as a way to route to individual posts.
+
+---
+
+16/02 7pm
+
+In this post I have completed my posts page and the form to submit a new post. At this point I think I'm definitely handling the clerk stuff in an awkward way, but I'm happy enough with how it's going right now. I did have some issues with the syntaxes and phrasing of different parts, but it was just a bit of trial and error until things fit. I also added the post form to the home page and in the future will add it to the user page

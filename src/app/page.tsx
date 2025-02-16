@@ -1,4 +1,5 @@
 import { SignUpButton, UserButton } from "@clerk/nextjs";
+import PostForm from "../../components/newPostForm/postForm";
 
 export default async function homePage() {
   return (
@@ -6,6 +7,7 @@ export default async function homePage() {
       <div>This is a fantastic page</div>
       <UserButton />
       <SignUpButton />
+      <PostForm />
     </>
   );
 }

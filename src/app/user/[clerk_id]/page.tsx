@@ -1,8 +1,5 @@
-import { Text } from "@radix-ui/themes";
 import { db } from "../../../../components/dbConnection";
 import EditAccountForm from "../../../../components/userStuff/editAccount";
-// import NewEditAccountForm from "../../../../components/userStuff/editAccount copy";
-import { currentUser } from "@clerk/nextjs/server";
 import { Header } from "@radix-ui/themes/components/table";
 
 export default async function userIDPage({ params }) {
@@ -36,9 +33,7 @@ export default async function userIDPage({ params }) {
           })}
         </div>
       </div>
-
       <EditAccountForm params={wrangledUser} />
-      {/* <NewEditAccountForm params={wrangledUser} /> */}
     </div>
   );
 }

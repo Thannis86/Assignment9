@@ -5,7 +5,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { Separator } from "@radix-ui/themes";
 import { UserButton, useUser } from "@clerk/nextjs";
-import currentUserID from "../currentUserId/currentuserId";
 
 export default function SignInNavbar({ params }) {
   const [open, setOpen] = useState(false);
