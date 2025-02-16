@@ -63,3 +63,25 @@ With the form for editing the profile mostly setup (Just need to do the submit b
 16/02 7pm
 
 In this post I have completed my posts page and the form to submit a new post. At this point I think I'm definitely handling the clerk stuff in an awkward way, but I'm happy enough with how it's going right now. I did have some issues with the syntaxes and phrasing of different parts, but it was just a bit of trial and error until things fit. I also added the post form to the home page and in the future will add it to the user page
+
+---
+
+16/02 9pm
+
+I have now completed posts on user pages to display posts posted by that user, along with finishing off the forms. For some reason this form was substantially more awkward than previous ones and wouldn't allow me to ender anything that wasn't pure string, so I ended up having to wrap all the values in `${}`.
+
+I have also wrapped some of the user specific features inside the signedin and signedout components and tidied up the page.
+
+Lastly I have included the posts function in a separate file and added it to the home page.
+
+---
+
+Requirements
+
+🎯 Create and display an error/not found page if the user visits a page that doesn’t exist.
+🎯 Enable users to create a user profile, and input profile information (such as a user biography) using a form. Users and user information should be stored in their own table in the database and handled with an appropriate route (e.g. /user/[userId]).
+
+Completed requirements
+🎯 Set up user sign-up and user login using Clerk.
+🎯 Use 1 or more Radix UI Primitive component, or something similar (e.g. use of a different component library to enhance UX, not just Tailwind).
+🎯 Enable users to create posts associated with their Clerk userId. Posts should be displayed on the user’s profile page.
