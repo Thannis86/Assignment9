@@ -213,3 +213,17 @@ button {
   align-self: center;
   grid-area: 2 / 3 / 3 / 4;
 }
+
+/* End Home Page Stuff */
+
+/* Error Page Stuff */
+
+#ErrorPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  grid-area: 3 / 3 / 4 / 4;
+}
+
+/* End Error Page Stuff */

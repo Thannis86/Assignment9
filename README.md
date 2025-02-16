@@ -76,12 +76,33 @@ Lastly I have included the posts function in a separate file and added it to the
 
 ---
 
-Requirements
+16/02 9:30pm
 
-🎯 Create and display an error/not found page if the user visits a page that doesn’t exist.
-🎯 Enable users to create a user profile, and input profile information (such as a user biography) using a form. Users and user information should be stored in their own table in the database and handled with an appropriate route (e.g. /user/[userId]).
+In this final push I have created my error page, completing all of my requirements. My biggest mistake on this project was assuming I'd finish it quicker than I did so that I could hit the stretch goals after spending the first day and a half playing around with radix and other bits. I didn't get to finish everything I wanted to, but unfortunately that was down to my own poor planning. I also didn't get my database properly setup as I spent a long time messing around with it due to DrawSQL giving me incorrect code. On multiple occasions I had to delete and recreate some of the tables. This means that none of the tables are actually joined. Some of this is due to my lack of understanding of joining tables, but a decent portion is due to me spending 4 hours trying to figure out why things weren't working as they should because I stupidly trusted the code given from a random website without properly checking it.
+
+I am however happy that I completed 1 of the stretch goals and all the basic requirements.
+
+In this update I have also adjusted some errors that have caused vercel to not properly deploy.
+
+---
+
+Requirements
 
 Completed requirements
 🎯 Set up user sign-up and user login using Clerk.
 🎯 Use 1 or more Radix UI Primitive component, or something similar (e.g. use of a different component library to enhance UX, not just Tailwind).
 🎯 Enable users to create posts associated with their Clerk userId. Posts should be displayed on the user’s profile page.
+🎯 Create and display an error/not found page if the user visits a page that doesn’t exist.
+🎯 Enable users to create a user profile, and input profile information (such as a user biography) using a form. Users and user information should be stored in their own table in the database and handled with an appropriate route (e.g. /user/[userId]).
+
+Stretch Goals
+
+🏹 Allow users to update their content. You can achieve this either with a dynamic route (“/posts/[id]/edit”) or by creating a modal.
+🏹 Allow users to delete their content.
+🏹 Let users follow each other by establishing a follower and followee relationship between profiles.
+🏹 Enable users to like posts by linking their user_id to the liked_post in a junction table.
+🏹 Ensure that a user’s biography cannot be left blank. If a user logs in without one, prompt them to add this information.
+🏹 Create and display an error/not found page if the user visits another users profile that doesn’t exist.
+
+Completed Stretch Goals
+🏹 Allow users to view other profiles directly from posts they see on the global timeline, using a dynamic users route.

@@ -4,6 +4,7 @@ import likesTable from "../../../components/new-account/likesTable";
 
 export default async function newAccountPage() {
   const user = await currentUser();
+  console.log(user);
 
   return (
     <div id="newAccountMain">
