@@ -1,9 +1,16 @@
+import editSubmit from "./editSubmit";
+
 export default async function EditAccountForm({ params }) {
   const wrangledUser = await params;
-  // console.log(wrangledUser);
+  console.log(wrangledUser);
   return (
-    <form id="userPageForm">
-      <label></label>
+    <form id="userPageForm" action={editSubmit}>
+      <input
+        type="hidden"
+        name="clerk_id"
+        value={wrangledUser.clerk_id}
+      ></input>
+      <label>First Name</label>
       <input
         type="text"
         placeholder={wrangledUser.first_name || "First Name"}
@@ -11,6 +18,7 @@ export default async function EditAccountForm({ params }) {
         id="first_name"
         required
       ></input>
+      <label>Last Name</label>
       <input
         type="text"
         placeholder={wrangledUser.last_name || "Last Name"}
@@ -18,6 +26,7 @@ export default async function EditAccountForm({ params }) {
         id="last_name"
         required
       ></input>
+      <label>About Me</label>
       <input
         type="text"
         placeholder={wrangledUser.about_me || "About Me"}
@@ -25,14 +34,15 @@ export default async function EditAccountForm({ params }) {
         id="about_me"
         required
       ></input>
+      <label>Date of Birth</label>
       <input
         type="text"
         placeholder={wrangledUser.dob || "Date of Birth"}
         name="dob"
         id="dob"
-        defaultValue={wrangledUser.dob}
         required
       ></input>
+      <label>Email</label>
       <input
         type="text"
         placeholder={wrangledUser.email || "Email"}
@@ -40,6 +50,7 @@ export default async function EditAccountForm({ params }) {
         id="email"
         required
       ></input>
+      <button type="submit">Save</button>
     </form>
   );
 }

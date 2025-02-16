@@ -1,13 +1,18 @@
-import { SignUpButton, UserButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut, SignUpButton, UserButton } from "@clerk/nextjs";
 import PostForm from "../../components/newPostForm/postForm";
+import ViewPosts from "../../components/viewPosts/ViewPosts";
 
 export default async function homePage() {
   return (
     <>
-      <div>This is a fantastic page</div>
       <UserButton />
-      <SignUpButton />
-      <PostForm />
+      <ViewPosts />
+      <SignedOut>
+        <h1 id="SignUpPlease">Please Sign In/Up To Make Posts</h1>
+      </SignedOut>
+      <SignedIn>
+        <PostForm />
+      </SignedIn>
     </>
   );
 }
