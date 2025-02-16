@@ -47,3 +47,13 @@ In this update I've tried a few things further to play around with. As mentioned
 I have set it so that creating an account through google will redirect you to a page where when you click the button, it will generate a row on the user table and create a new likes table which will be later integrated into the likes feature.
 
 My current biggest issue is having things being retrievered through 'const user = await currentUser();' as the page crashes if a user isn't signed up, but this was my plan for people to be able to edit their own profiles without interacting with others. So that's something to look at tomorrow. At this point I am confident in hitting all base goals in time, but not the stretch goals.
+
+---
+
+16/02 5pm
+
+Today I decided to start with the user page as an easier start. I've setup a regular form and started working on a nicer form with Radix but decided that sticking with simpler stuff with my time limit was probably for the best.
+
+I've also added a button to the nav bar to take you to your own profile page which was a huge headache to get the current user ID on the client side. I tried creating a server side component that would export just the user ID but because of the async/await section, it wouldn't properly send the user ID. Eventually I used 'useUser' to be able to properly get it client side.
+
+With the form for editing the profile mostly setup (Just need to do the submit button and the function for that), I decided to work on the posts section, then ran into issues with the mapping component, partly due to typescript and it wanting a type for the posts element which i don't know how to add, so i switched to the posts page instead which will likely just be added to the home page with the posts page working as a way to route to individual posts.
