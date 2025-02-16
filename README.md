@@ -80,7 +80,7 @@ Lastly I have included the posts function in a separate file and added it to the
 
 In this final push I have created my error page, completing all of my requirements. My biggest mistake on this project was assuming I'd finish it quicker than I did so that I could hit the stretch goals after spending the first day and a half playing around with radix and other bits. I didn't get to finish everything I wanted to, but unfortunately that was down to my own poor planning. I also didn't get my database properly setup as I spent a long time messing around with it due to DrawSQL giving me incorrect code. On multiple occasions I had to delete and recreate some of the tables. This means that none of the tables are actually joined. Some of this is due to my lack of understanding of joining tables, but a decent portion is due to me spending 4 hours trying to figure out why things weren't working as they should because I stupidly trusted the code given from a random website without properly checking it.
 
-I am however happy that I completed 1 of the stretch goals and all the basic requirements.
+I am however happy that I completed 1 of the stretch goals and all the basic requirements. In the time I have remaining I may try to add another stretch goal to the finish line.
 
 In this update I have also adjusted some errors that have caused vercel to not properly deploy.
 
