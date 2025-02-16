@@ -153,5 +153,46 @@ button {
 
 #PostsDiv {
   display: flex;
+  justify-content: baseline;
+  align-content: center;
+  flex-direction: column;
   grid-area: 3 / 3 / 4 / 4;
+}
+
+.PostsBackgroundDiv {
+  grid-area: 1 / 1 / 4 / 4;
+  background-color: purple;
+}
+
+.PostsPagePosts {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(74, 14, 78, 0.2);
+}
+
+.PostsName {
+  padding: 10px;
+}
+
+.PostsBody {
+  margin: 10px;
+  width: 90%;
+  padding: 10px;
+  background-color: rgb(74, 14, 78, 0.1);
+}
+
+#PostsForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  grid-area: 2 / 3 / 3 /4;
+}
+
+#PostsFormsBody {
+  width: 100%;
+  height: 80%;
+  background-color: rgb(74, 14, 78, 0.1);
 }
