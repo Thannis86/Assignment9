@@ -4,17 +4,19 @@ import { Avatar, Heading, DropdownMenu } from "@radix-ui/themes";
 import { useState } from "react";
 import Link from "next/link";
 import { Separator } from "@radix-ui/themes";
-import { UserButton } from "@clerk/nextjs";
+import { UserButton, useUser } from "@clerk/nextjs";
+import currentUserID from "../currentUserId/currentuserId";
 
-export default function SignInNavbar() {
+export default function SignInNavbar({ params }) {
   const [open, setOpen] = useState(false);
-
+  const { user } = useUser();
   return (
     <main id="navbar">
       <div id="navColour"></div>
       <Link href={"/"} id="navLogo">
         <Avatar radius="full" size="6" fallback="H"></Avatar>
       </Link>
+      <Link href={`/user/${user?.id}`}>User Profile</Link>
       <Heading id="navHome">Nav Bar</Heading>
       <UserButton />
       <div id="dropDownDiv">

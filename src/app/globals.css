@@ -124,3 +124,34 @@ button {
 }
 
 /* End New Account Page */
+
+/* User Page Stuff */
+
+#userPage {
+  display: grid;
+  grid-area: 1 / 1 / 4 / 6;
+  grid-template-columns: 2fr 2fr 8fr 2fr 2fr;
+  grid-template-rows: 1fr 2fr 8fr;
+}
+
+#userPageForm {
+  grid-area: 3 / 2 / 3 / 3;
+}
+
+#userPageForm2 {
+  grid-area: 3 / 1 / 3 / 3;
+}
+
+/* End User Page Stuff */
+
+#PostsPageDiv {
+  display: grid;
+  grid-area: 1 / 1 / 4 / 6;
+  grid-template-columns: 2fr 2fr 8fr 2fr 2fr;
+  grid-template-rows: 1fr 2fr 8fr;
+}
+
+#PostsDiv {
+  display: flex;
+  grid-area: 3 / 3 / 4 / 4;
+}
