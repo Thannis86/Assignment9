@@ -99,3 +99,28 @@ body {
 }
 
 /* End Sign In/Up Pages */
+
+button {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+/* New Account Page */
+
+#newAccountMain {
+  display: grid;
+  grid-area: 1 / 1 / 4 / 6;
+  grid-template-columns: 2fr 2fr 8fr 2fr 2fr;
+  grid-template-rows: 1fr 2fr 8fr;
+}
+
+#newAccountButton {
+  display: flex;
+  grid-area: 3 / 3 / 4 / 4;
+}
+
+#newAccountSecondButton {
+  display: none;
+  grid-area: 3 / 3 / 4 / 4;
+}
+
+/* End New Account Page */

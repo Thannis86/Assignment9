@@ -6,7 +6,7 @@ export default function signUpPage() {
     <div id="signMainDiv">
       <Header id="signHead">Sign Up Page</Header>
       <div id="signBox">
-        <SignUp />
+        <SignUp redirectUrl="/new-account" />
       </div>
     </div>
   );

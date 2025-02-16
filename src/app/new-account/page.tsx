@@ -1,14 +1,18 @@
 import { currentUser } from "@clerk/nextjs/server";
+import { Button, Link } from "@radix-ui/themes";
+import likesTable from "../../../components/new-account/likesTable";
 
 export default async function newAccountPage() {
   const user = await currentUser();
-  console.log(user);
-  const userID = await user.id;
-  const userFirstName = await user.firstName;
-  const userEmail = await user.emailAddresses[0].emailAddress;
 
-  console.log(userID);
-  console.log(userFirstName);
-  console.log(userEmail);
-  return <p>New Account</p>;
+  return (
+    <div id="newAccountMain">
+      <Button id="newAccountButton" onClick={likesTable}>
+        Please click here to complete sign up
+      </Button>
+      <Link id="newAccountSecondButton">
+        Click here to fill in your new profile!
+      </Link>
+    </div>
+  );
 }

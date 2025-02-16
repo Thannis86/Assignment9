@@ -35,3 +35,15 @@ Today I continued working with clerk. I don't like how the skeleton was suggesti
 After a significant amount of research, watching 2 year old videos because they're the only ones that can link the two together and a lot of general experimenting, I figured out how best to work on this approach.
 
 Importing currentUser from @clerk/nextjs/server enables me to create an object with all the details the server/client is receiving from clerk in order for the account to actually function. From here I can separate the individual parts of the object into things such as email, firstName and actual userID. I can then shove this onto the redirected new account page and have this information automatically sent to the database to setup new tables. I can also use this as a verifcation for being able to edit your own profile.
+
+---
+
+15/02 11pm
+
+So my previous push didn't get properly pushed for some reason and I'm not sure why, so here you get both of them.
+
+In this update I've tried a few things further to play around with. As mentioned, I didn't like how the sign up process worked so I've started on my own. The issue that I was having was rediricting the sign in URL from the sign in page wasn't working and it was sending it to a random uncreated page on my website and not actually generating the account. The way I found to counter this was to have the only sign up option be through google, so I hope everyone that wants to see this has a google account.
+
+I have set it so that creating an account through google will redirect you to a page where when you click the button, it will generate a row on the user table and create a new likes table which will be later integrated into the likes feature.
+
+My current biggest issue is having things being retrievered through 'const user = await currentUser();' as the page crashes if a user isn't signed up, but this was my plan for people to be able to edit their own profiles without interacting with others. So that's something to look at tomorrow. At this point I am confident in hitting all base goals in time, but not the stretch goals.
