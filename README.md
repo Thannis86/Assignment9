@@ -86,6 +86,38 @@ In this update I have also adjusted some errors that have caused vercel to not p
 
 ---
 
+I've still been working and may push this if given permission.
+
+To start with I've created a delete button for posts that only appear for posts that are linked to the currently logged in user. This was fairly straightforward and easy after some messing between currentUser and useUser from Clerk. It did take me an extra moment to add it to the user page too as they are separate functions from the posts and home pages, but it wasn't too difficult.
+
+I completed the edit post function. This was a mix of the edit profile and delete post functions.
+
+I have now finished 4/7 of the stretch goals and I'm happy with this for now.
+
+If given the opportunity, I would update the edit profile page to only appear based on current user as it currently appears for everyone (Similarly to how I've have the delete and edit function appear based on the user). I would also add a comment function and the stretch goal of the like posts.
+
+---
+
+17/02 10pm
+
+This will be my last push after confirming with Joe that I will be able to do so. This includes the previous section that's not timestamped.
+
+I have reconfigured my user page to display the user's profile information and have created a conditionally rendered edit button to take the user to a separate edit page. I have also had the form for this conditionally render for the current user so no one can 'hack' another profile.
+
+I have now created a like function that also logs the post liked on a separate table, created for each user. I have also included in the SQL that you cannot have the same post in your likes table multiple times, however, adding it so that you cannot like a post more than once to increase the likes counter would require completely recreating the posts function to handle this.
+
+I have inserted into the user's page a table that shows posts that the user has liked. Unfortunately due to conflicts, I did have to alter the SQL that stopped repeat posts from being added to the user's likes table. However, because of how the query pulls the posts from the table using the user's likes table as a reference, it will only pull the same result once anyway. There is however no way to unlike a post.
+
+With this I have hit the likes goal.
+
+I am tempted to add a comments feature too, but I am also aware that I don't want to oversaturate what is an assignment needing to be marked, especially with things outside the actual spec. With that in mind however, I do believe that while I haven't hit all of the stretch goals, I have shown my understanding well enough to have hit them if I had gone for them and this is a point I'm happy to argue (Fight me Joe)
+
+The only thing I wish I'd done is a custom sign out button. Currently I have left a clerk drop down for this instead of figuring out the correct rerouting to add it to my own drop down, but I am confident that given I have created the routes for sign in and sign up, this would be within my capabilities.
+
+I am also aware of an issue with the routing where if you sign up through google through the sign in page, it will send you to the wrong address.
+
+---
+
 Requirements
 
 Completed requirements
@@ -97,12 +129,12 @@ Completed requirements
 
 Stretch Goals
 
-🏹 Allow users to update their content. You can achieve this either with a dynamic route (“/posts/[id]/edit”) or by creating a modal.
-🏹 Allow users to delete their content.
 🏹 Let users follow each other by establishing a follower and followee relationship between profiles.
-🏹 Enable users to like posts by linking their user_id to the liked_post in a junction table.
 🏹 Ensure that a user’s biography cannot be left blank. If a user logs in without one, prompt them to add this information.
-🏹 Create and display an error/not found page if the user visits another users profile that doesn’t exist.
 
 Completed Stretch Goals
 🏹 Allow users to view other profiles directly from posts they see on the global timeline, using a dynamic users route.
+🏹 Allow users to delete their content.
+🏹 Create and display an error/not found page if the user visits another users profile that doesn’t exist.
+🏹 Allow users to update their content. You can achieve this either with a dynamic route (“/posts/[id]/edit”) or by creating a modal.
+🏹 Enable users to like posts by linking their user_id to the liked_post in a junction table.

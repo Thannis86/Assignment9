@@ -1,5 +1,6 @@
 "use server";
 
+import { redirect } from "next/navigation";
 import { db } from "../dbConnection";
 
 export default async function editSubmit(formvalues, event) {
@@ -13,17 +14,6 @@ export default async function editSubmit(formvalues, event) {
   const dob = await formvalues.get("dob");
   const email = await formvalues.get("email");
   console.log(`DOB = ${dob}`);
-  // console.log(
-  //   `ClerkID = ${clerkID} - firstName = ${firstName} - LastName = ${lastName} - aboutme = ${aboutMe} - dob = ${dob} - email = ${email}`
-  // );
-
-  // db.query(`INSERT INTO userstuff WHERE clerk_id=$1
-  //   VALUES(first_name, last_name, email, dob, about_me)`);
-
-  // db.query(
-  //   `UPDATE userstuff SET first_name = $1, last_name = $2, email = $3, dob = $4, about_me = $5
-  //   WHERE clerk_id=$6`[(firstName, lastName, email, dob, aboutMe, 1)]
-  // );
   db.query(
     `UPDATE userstuff SET first_name = $1, last_name = $2, email = $3, dob = $4, about_me = $5
     WHERE clerk_id = $6`,
@@ -36,4 +26,5 @@ export default async function editSubmit(formvalues, event) {
       `${clerkID}`,
     ]
   );
+  redirect(`/user/${clerkID}`);
 }
