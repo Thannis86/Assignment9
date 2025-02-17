@@ -1,24 +1,30 @@
 import { db } from "../dbConnection";
-import Link from "next/link";
-import { Button, Text } from "@radix-ui/themes";
-import { currentUser } from "@clerk/nextjs/server";
+import LikeButton from "../likesButton/likesSubmit";
 import DeleteButton from "../deleteButtons/deletebutton";
 import EditButton from "../editButton/editbutton";
-import LikeButton from "../likesButton/likesSubmit";
+import { Text, Button, Heading } from "@radix-ui/themes";
 
-export default async function ViewPosts({ params }) {
+export default async function UserLikes({ params }) {
   const clerk_id = await params;
-  const posts = await db.query(`SELECT * FROM posts`);
-  const wrangledPosts = posts.rows;
-  console.log(wrangledPosts);
+  console.log(clerk_id);
+  const posts = await db.query(`SELECT *
+FROM posts
+WHERE id IN (SELECT post_id FROM likes_${clerk_id});`);
+
+  const name = await db.query(`SELECT * FROM userstuff WHERE clerk_id=$1`, [
+    clerk_id,
+  ]);
+  const brokenName = name.rows[0].first_name;
+  console.log(brokenName);
+  const brokenPosts = posts.rows;
+  console.log(brokenPosts);
   return (
-    <div id="PostsDiv">
-      {wrangledPosts.map((posts) => (
+    <div id="UserPageLikes">
+      <Heading>{brokenName} Likes</Heading>
+      {brokenPosts.map((posts) => (
         <div key={posts.id} className="PostsPagePosts">
           <div className="PostsBackgroundDiv"></div>
-          <Link href={`/user/${posts.clerk_id}`} className="PostsName">
-            {posts.poster_name}
-          </Link>
+          <Text className="PostsName">{posts.poster_name}</Text>
           <Text className="PostsBody">{posts.body}</Text>
           <Text className="Posts">Likes: {posts.likes}</Text>
           <DeleteButton params={posts} />

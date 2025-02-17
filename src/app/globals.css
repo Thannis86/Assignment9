@@ -134,10 +134,19 @@ button {
   grid-template-rows: 1fr 2fr 8fr;
 }
 
+#EditUserPage {
+  display: grid;
+  grid-area: 1 / 1 / 4 / 6;
+  grid-template-columns: 2fr 2fr 8fr 2fr 2fr;
+  grid-template-rows: 1fr 2fr 8fr;
+}
+
 #userPageForm {
   display: flex;
+  justify-content: baseline;
+  align-items: center;
   flex-direction: column;
-  grid-area: 3 / 1 / 3 / 3;
+  grid-area: 3 / 3 / 4 / 4;
 }
 
 #userPageForm2 {
@@ -145,10 +154,22 @@ button {
 }
 
 #userPagePosts {
-  grid-area: 3 / 3 / 4 / 6;
+  grid-area: 3 / 2 / 4 / 4;
+}
+
+#UserPageLikes {
+  grid-area: 3 / 4 / 4 / 6;
+}
+
+#UserPageProfile {
+  display: flex;
+  flex-direction: column;
+  grid-area: 3 / 1 / 4 / 2;
 }
 
 /* End User Page Stuff */
+
+/* Posts Stuff */
 
 #PostsPageDiv {
   display: grid;
@@ -203,7 +224,7 @@ button {
   background-color: rgb(74, 14, 78, 0.1);
 }
 
-/* End user page stuff */
+/* End Posts Stuff */
 
 /* Home Page Stuff */
 
@@ -227,3 +248,25 @@ button {
 }
 
 /* End Error Page Stuff */
+
+/* Edit Page Stuff */
+
+#EditPageDiv {
+  display: grid;
+  grid-area: 1 / 1 / 4 / 6;
+  grid-template-columns: 2fr 2fr 8fr 2fr 2fr;
+  grid-template-rows: 1fr 2fr 8fr;
+}
+
+#EditPageForm {
+  display: flex;
+  grid-area: 3 / 3 / 4 / 4;
+}
+
+#EditPageBack {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  font-size: xx-large;
+  grid-area: 2 / 3 / 3 / 4;
+}
