@@ -2,7 +2,7 @@
 
 import { db } from "../dbConnection";
 
-export default async function LikeButton(formvalues) {
+export default async function LikeSubmit(formvalues) {
   const id = formvalues.get("id");
   const clerk_id = formvalues.get("clerk_id");
 

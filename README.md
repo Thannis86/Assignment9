@@ -98,7 +98,7 @@ If given the opportunity, I would update the edit profile page to only appear ba
 
 ---
 
-17/02 10pm
+17/02 9pm
 
 This will be my last push after confirming with Joe that I will be able to do so. This includes the previous section that's not timestamped.
 
@@ -115,6 +115,12 @@ I am tempted to add a comments feature too, but I am also aware that I don't wan
 The only thing I wish I'd done is a custom sign out button. Currently I have left a clerk drop down for this instead of figuring out the correct rerouting to add it to my own drop down, but I am confident that given I have created the routes for sign in and sign up, this would be within my capabilities.
 
 I am also aware of an issue with the routing where if you sign up through google through the sign in page, it will send you to the wrong address.
+
+---
+
+17/02 9:30pm
+
+Slight lie. There was an issue that I believed I had fixed with the currentUser function. Unfortunately I hadn't and anyone that wasn't signed in viewing elements that relied on it would crash because the value was coming out as null. To fix this, I hid all elements that use this behind <SignedIn>. This doesn't affect functionality.
 
 ---
 
